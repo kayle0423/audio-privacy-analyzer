@@ -1,50 +1,114 @@
 # AI CUP 2025 醫病語音敏感個人資料辨識競賽
-本專案提供一個名為 AudioAnalyzer 的類別，專門用於處理音訊檔案，將語音內容轉錄為文字，並從中識別出潛在的敏感資訊。該類別整合了 OpenAI Whisper 模型進行高準確度的語音轉文字處理，並結合 spaCy 進行命名實體識別（NER），同時輔以自訂的正規表達式，以提升對敏感資料的偵測能力，如個人資訊、時間資訊及職業等。
 
-功能特色
+---
+
+## 專案簡介
+
+**AudioAnalyzer** 專案旨在自動轉錄醫療語音錄音，並從中識別和提取**個人可識別資訊 (Personally Identifiable Information, PII)**。它利用 **Whisper** 實現強大的語音轉文字功能，並結合 **spaCy** 和客製化訓練的模型進行進階的命名實體識別 (NER)。我們的目標是精確地找出醫病對話中的敏感資料，並為每個識別出的實體提供時間戳記。
+
+---
+
+## 功能特色
+
+* **精確度語音轉文字**：利用 OpenAI 的 Whisper 模型，以卓越的精確度轉錄音訊。
+* **全面性 PII 偵測**：識別多種敏感資訊，包括：
+    * **個人姓名** (病患、醫生)
+    * **病歷號碼**
+    * **身分證字號**
+    * **年齡**
+    * **電話號碼**
+    * **郵遞區號**
+    * **網址**
+    * **部門** (例如：醫院特定部門)
+    * **街道地址**
+    * **醫院/組織**
+    * **日期** (完整日期和星期幾)
+* **時間戳記**：為音訊片段中每個偵測到的 PII 提供確切的開始和結束時間。
+* **智慧重疊處理**：防止因不同識別方法 (正規表達式和 spaCy) 導致的重複或衝突的 PII 偵測。
+* **批次處理**：高效處理指定資料夾中的多個音訊檔案。
+
+---
 
 
-語音轉文字： 使用 Whisper 模型將音訊檔案轉錄成文字。
 
-敏感資訊提取： 識別並提取多種敏感資訊類型，包括：
+### 環境配置
 
-年齡 (AGE)
+* **作業系統**：Windows 11, macOS
+* **開發平台**：PyCharm, Google Colab Pro (A100 GPU 支援)
+* **程式語言**：Python 3.12
 
-病歷號碼(MEDICAL_RECORD_NUMBER)
+### 安裝步驟
 
-身分證字號 (ID Number)
 
-郵遞區號 (ZIP Code)
+1.  **建立並啟動虛擬環境：**
 
-電話號碼 (PHONE_NUMBER)
+    ```bash
+    python -m venv venv
+    # Windows 系統
+    .\venv\Scripts\activate
+    # macOS/Linux 系統
+    source venv/bin/activate
+    ```
 
-網址 (URL)
+    
 
-部門 (DEPARTMENT)
+2.  **安裝所需的 Python 套件：**
 
-街道地址 (STREET)
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-個人姓名 (PERSONAL NAME/FAMILY NAME)
+    *(請確保你的根目錄中有 `requirements.txt` 檔案，其中包含 `openai-whisper` 和 `spacy`，請參考下一節的內容。)*
 
-醫院和組織 (HOSPITAL/ORGANIZATION)
+3.  **下載 spaCy 模型：**
 
-日期(DATE)
+   
 
-時間戳記： 為所有識別出的敏感實體提供在音訊中的開始和結束時間戳記。
+    ```bash
+    python -m spacy download en_core_web_trf
+    ```
 
-重疊實體處理： 智慧處理不同方法 (正規表達式和 spaCy 模型) 偵測到的重疊實體，避免重複。
+    對於客製化模型，請確保你將訓練好的模型 (`model-best`) 放置在專案中：
 
-音訊資料夾處理： 能夠處理指定資料夾內的所有音訊檔案。
+    ```
+    AudioAnalyzer/
+    ├──   model-best/  # 你的客製化 spaCy 模型檔案
+    ├── AudioAnalyzer.py
+    └── requirements.txt
+    ```
 
-1. 建立虛擬環境
-python -m venv venv
-# Windows 系統
-.\venv\Scripts\activate
-# macOS/Linux 系統
-source venv/bin/activate
+---
 
-2. 安裝套件
-pip install -r requirements.txt
-3. 
-4. 
+## 使用方式
+
+安裝完成後，你可以輕鬆分析你的音訊檔案。
+
+1.  **準備你的音訊檔案：** 將所有要分析的音訊檔案 (例如：`.wav`, `.mp3`) 放入一個資料夾中。為了方便依序處理，建議將檔案命名為數字 (例如：`1.wav`, `2.mp3` 等)。
+
+2.  **更新腳本：** 打開 `AudioAnalyzer.py`，修改 `if __name__ == "__main__":` 區塊中的 `folder_path` 變數，使其指向你的音訊目錄：
+
+    ```python
+    # AudioAnalyzer.py 檔案中的程式碼片段
+    if __name__ == "__main__":
+        analyzer = AudioAnalyzer()
+        # 重要：請將此路徑替換為你的音訊檔案的實際路徑
+        folder_path = "path/to/your/audio/folder"
+        analyzer.process_folder(folder_path)
+    ```
+
+3.  **執行分析器：**
+
+    ```bash
+    python AudioAnalyzer.py
+    ```
+
+### 輸出結果
+
+腳本會將識別出的敏感資訊及其對應的時間戳記列印到你的控制台。如果你取消 `analyze_audio` 和 `process_folder` 中寫入檔案部分的註解，它還會將完整的轉錄文字儲存到 `task1_answer.txt`，並將詳細的 PII 結果 (類型、開始時間、結束時間、資訊) 儲存到 `task2_answer.txt`。
+
+---
+
+## `requirements.txt` 檔案內容
+
+建立一個名為 `requirements.txt` 的檔案，內容如下。你可能需要根據相容性或特定需求調整版本。
 
