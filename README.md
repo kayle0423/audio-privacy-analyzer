@@ -10,13 +10,13 @@
 
 年齡 (AGE)
 
-病歷號碼
+病歷號碼(MEDICAL_RECORD_NUMBER)
 
 身分證字號 (ID Number)
 
 郵遞區號 (ZIP Code)
 
-電話號碼 (PHONE NUMBER)
+電話號碼 (PHONE_NUMBER)
 
 網址 (URL)
 
