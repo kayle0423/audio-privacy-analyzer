@@ -42,6 +42,9 @@ python -m venv venv
 .\venv\Scripts\activate
 # macOS/Linux 系統
 source venv/bin/activate
-2. 
+
+2. 安裝套件
+pip install -r requirements.txt
 3. 
+4. 
 
