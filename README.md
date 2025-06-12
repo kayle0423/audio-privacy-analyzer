@@ -36,3 +36,12 @@
 
 音訊資料夾處理： 能夠處理指定資料夾內的所有音訊檔案。
 
+1. 建立虛擬環境
+python -m venv venv
+# Windows 系統
+.\venv\Scripts\activate
+# macOS/Linux 系統
+source venv/bin/activate
+2. 
+3. 
+
