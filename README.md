@@ -55,10 +55,11 @@
 2.  **安裝所需的 Python 套件：**
 
     ```bash
-    pip install -r requirements.txt
+    pip install -U openai-whisper
+    pip install spacy
     ```
 
-    *(請確保你的根目錄中有 `requirements.txt` 檔案，其中包含 `openai-whisper` 和 `spacy`，請參考下一節的內容。)*
+   
 
 3.  **下載 spaCy 模型：**
 
