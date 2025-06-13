@@ -49,8 +49,13 @@ pip install -U openai-whisper
 !pip install spacy
 python -m spacy download en_core_web_trf
 ```
+```Python
+from google.colab import drive
+drive.mount('/content/drive')
+```
+若使用Google Colab，將音檔放到雲端並從雲端讀取。
 
-
+---
 
 ### 程式碼解釋
 
@@ -294,7 +299,7 @@ if __name__ == "__main__":
 
 音訊檔案： 將所有要分析的音訊檔案(.wav) 放入一個資料夾中。
 
-更新腳本： 打開 AudioAnalyzer.py，修改 if __name__ == "__main__": 區塊中的 folder_path 變數，使其指向你的音訊目錄：
+更新腳本： 打開 audio.py，修改 if __name__ == "__main__": 區塊中的 folder_path 變數，使其指向你的音訊目錄：
 
 ```Python
 # audio.py 檔案中的程式碼片段
@@ -307,7 +312,7 @@ if __name__ == "__main__":
  執行：
 
 ```Bash
-python AudioAnalyzer.py
+python audio.py
 ```
 ---
 
