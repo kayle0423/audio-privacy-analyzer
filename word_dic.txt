@@ -1,0 +1,12 @@
+換字資料字典
+replacement_dict = {
+    "PATIENT": list(PATIENT_names),
+    "DOCTOR": list(DOCTOR_names),
+    "PERSONALNAME": list(PERSONALNAME_list),
+    "FAMILYNAME": list(family_names),
+    "STREET": list(STREET_list),
+    "CITY": list(city_list),
+    "STATE": list(states_list),
+    "AGE": list(AGE_list),
+    "ORGANIZATION": list(ORG_list)
+}
