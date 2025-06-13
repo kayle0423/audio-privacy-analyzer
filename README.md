@@ -319,3 +319,11 @@ python audio.py
 輸出結果
 
 腳本會將識別出的敏感資訊及其對應的時間戳記列。會將完整的轉錄文字儲存到 `task1_answer.txt`，並將詳細的  結果 (類型、開始時間、結束時間、資訊、時間戳) 儲存到 `task2_answer.txt`。
+
+---
+
+## private dataset結果
+
+<img width="1178" alt="image" src="https://github.com/user-attachments/assets/3c2693de-b8e8-4fef-a023-41b99dce2e71" />
+
+<img width="653" alt="image" src="https://github.com/user-attachments/assets/e53ab08a-a716-4430-a87a-5c901bb9bdc4" />
