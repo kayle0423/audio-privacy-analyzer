@@ -307,8 +307,4 @@ python audio.py
 
 ---
 
-## private dataset結果
 
-<img width="1178" alt="image" src="https://github.com/user-attachments/assets/3c2693de-b8e8-4fef-a023-41b99dce2e71" />
-
-<img width="653" alt="image" src="https://github.com/user-attachments/assets/e53ab08a-a716-4430-a87a-5c901bb9bdc4" />
