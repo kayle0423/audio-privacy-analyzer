@@ -293,22 +293,7 @@ if __name__ == "__main__":
 
 ---
 
-### 使用方式
 
-
-
-音訊檔案： 將所有要分析的音訊檔案(.wav) 放入一個資料夾中。
-
-更新腳本： 打開 audio.py，修改 if __name__ == "__main__": 區塊中的 folder_path 變數，使其指向你的音訊目錄：
-
-```Python
-# audio.py 檔案中的程式碼片段
-if __name__ == "__main__":
-    analyzer = AudioAnalyzer()
-    # 重要：請將此路徑替換為你的音訊檔案的實際路徑
-    folder_path = "path/to/your/audio/folder"
-    analyzer.process_folder(folder_path)
-```
  執行：
 
 ```Bash
