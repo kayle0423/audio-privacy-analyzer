@@ -272,7 +272,7 @@ def process_folder(self, folder_path):
 
 6.列印排序後的時間戳記。
 
-7.包含被註解掉的程式碼，用於將結果寫入 `task2_answer.txt` 文件中（可根據需要啟用）。
+7.包含被註解掉的程式碼，用於將結果寫入 `task2_answer.txt` 文件）。
 
 ---
 
@@ -282,7 +282,7 @@ def process_folder(self, folder_path):
 ```Python
 if __name__ == "__main__":
     analyzer = AudioAnalyzer()
-    folder_path = "音檔路徑" # 請將此路徑替換為你的音訊檔案資料夾的路徑
+    folder_path = "音檔路徑" 
     analyzer.process_folder(folder_path)
 ```
 1.創建 `AudioAnalyzer` 類別的一個實例。
