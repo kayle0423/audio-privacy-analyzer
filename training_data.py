@@ -8,8 +8,7 @@ from spacy.util import filter_spans # 用於處理重疊實體
 
 
 # --- 換字資料 (Replacement Data) ---
-# 這些列表提供資料擴增所需的實際替換值。
-# 請確保這些列表根據您的特定用例填充了多樣且相關的資料。
+
 
 states_list = {
             "Ohio", "California", "Montana", "Rhode Island", "California", "Northern Territory", "Victoria",
