@@ -1,0 +1,71 @@
+states_list = {
+            "Ohio", "California", "Montana", "Rhode Island", "California", "Northern Territory", "Victoria",
+            "Western Australia", "South Australia", "ACT", "TAS", "VIC", "NT", "Tasmania", "New South Wales", "QLD",
+            "Australian Capital Territory", "WA", "Leeton", "Denman", "SA", "Moranbah", "Oregon", "Delaware", "RA", "RI",
+            "Texas", "Queensland", "Territory", "Florida", "Pennsylvania", "Illinois", "Georgia", "North Carolina",
+            "Michigan", "Virginia", "Washington", "Arizona", "Massachusetts", "CA", "TX", "FL", "PA",
+            "IL", "OH", "GA", "MI", "VA", "AZ", "MA"
+}
+countries_list = {"India", "Madagascar", "Ethiopian",
+                "United States", "USA", "China", "Syria", "Brazil", "Russia",
+                "Japan", "Germany", "France", "UK", "Italy", "Canada", "South Korea", "Thailand",
+}
+city_list = {"Geneva", "Chicago", "Hamden", "Denver", "Shresthire", "Camden Haven", "Kyabram", "Devonport",
+           "Nambucca Heads", "Kiama", "Mount Eliza", "Bowen", "Bonny Hills", "Port Adelaide Enfield",
+           "Orbost", "Northam", "Stirling", "Armidale", "Caboolture", "Cobar", "Penguin", "Coonabarabran",
+            "Urraween", "Moura", "Kyabram", "Barwon Heads", "Banora Point, South", "Goondiwindi",
+            "Smithton", "Gold Coast", "Howlong", "Beaconsfield Upper", "Batemans Bay", "Yamba", "Casino",
+            "Richmond", "Newcastle", "Wauchope", "Gosford", "Bega", "Thirlmere", "Goolwa", "Newcastle",
+            "Waterford", "Orbost", "Vincentia", "Moranbah", "Rockhampton", "Millicent", "Buninyong",
+            "Tinonee", "Aldgate", "Lismore", "Williamstown", "Roxby Downs", "Leongatha", "LA", "Frederick",
+            "Sydney", "Phoenix", "San Francisco", "Austin", "Taree", "Kingaroy", "Curlewis", "Silverdale",
+            "Ipswich", "Bacchus Marsh", "Terranora", "Windsor", "Lara", "Encounter Bay", "Mulwala", "Gosford",
+            "Blayney", "Redcliffe", "Launceston", "Bega", "Newcastle", "Sanctuary Point", "Tea Gardens", "Moama",
+            "San Remo", "Miami", "San Antonio", "Chicago", "Wallingford",
+}
+STREET_list = {"Stratford House", "Rocky Spring", "Rossi", "Prairie Hill", "Devonport", "Cantello",
+                "Hamstrom", "Vincents", "Upper Mount Glen Lake", "N Cumnor", "Main Line", "Fort Foote",
+                "Capertee", "Fawkham", "Talbryn", "Richland Valley", "Glenview", "Lower Matchaponix", "Leestone",
+                "Midge Hall", "New Jefferson", "Juniper Point", "Pleasant Chase", "Daley", "Sylmar", "Belcourt",
+                "Northome", "Wokindon", "West Railroad", "Legra", "Mildura", "Forest Knoll", "Oxendon", "Stockdale",
+                "West Bolivar", "Nimco", "Marjorie Jackson", "E Joffre", "Kimball Hill", "South Tinnin", "Quincey",
+                "Tarporley", "North Napa", "Colemans"
+}
+LOCATION_OTHER_list = {"Mystic", "Canterbury", "Andover", "Chicago metro area", "P.O. Box 15",
+                        "Tenterfield", "Tenterfield", "Brooklyn Bridge", "New Haven", "Genevieve", "Africa",
+                        "African", "Denver", "Brown"}
+
+ORG_list = {"Bank of America", "YMCA", "Cambridge Business", "Subway", "Sealed Air Corporation",
+        "Delta Air Lines", "Ameren Corporation", "Boston Scientific", "Google", "Orizia", "Starbucks",
+        "Divinity School Library", "Wesley", "Cambridge", "Michaels", "Datsun", "libraries",
+        "Western Convention Center", "Career Services", "seekers workshop", "Jewish girl's school"
+        }
+
+PATIENT_names = {
+            "Jessa", "Ramona", "Audrey", "Taylor", "Jessica", "Tanya", "Crazy", "Stacy", "Mason", "Gordan", "Chris", "Nida",
+            "Jolin", "Sabrina", "Eric", "Roy", "Ashley", "Alan", "Katrina", "Oliva", "Carol", "Dora", "Cathy", "Nikola",
+            "Oliver", "Maria", "Calvin", "Jessup", "Kinkos", "Mike", "Virgina", "George", "Tomas", "Gordan", "Anny", "Mark",
+            "Tereasa", "Sara", "Leon", "Jeremy", "Isa", "Ella", "Ariel", "Derrick", "Brendon", "Florrie", "Jasper", "Katrina",
+            "Roy", "Dillon", "Garry", "Calvin", "Connie", "Sabrina", "Nikola", "Ariel", "Kenny", "Susan",
+            "June", "Jesse", "Elizabeth", "Cameron", "Tonya", "Meg",
+
+}
+
+DOCTOR_names = {
+            "Dave", "Debbie", "VX", "Jamie", "Kantarian", "YQ", "A Saylor", "IJ", "Theis", "Nora Melvin Morreale", "Mr. Hunter",
+            "Nguya Adolfo Tries", "Henson", "Yu DiRenzo", "Sharla Carithers", "WG", "XW", "Raul Errol Paulhus", "GE", "fr",
+            "Quade Edison Jenness", "Tarka Williams Krahn", "X Nalley", "Stewart", "Hook", "Rickson Naya Marcus",
+            "Barnes", "Bourd", "Board", "Jones", "Micah", "Green", "Farrow", "Chad", "Yep",
+}
+
+family_names = {
+            "Ivan", "Josh", "Lucille", "Smith", "Johnson", "Williams", "Brown", "Jones",
+            "Miller", "Davis", "Wilson", "Stefan", "Tanya", "Harold", "Steppen",
+            "Taunia", "Thompson", "Allen", "Parker", "Lewis", "Emma"
+}
+
+PERSONALNAME_list = {"Jess", "Kelly", "Franco", "Riley", "David", "Jeez", "Sydney", "Hooray", "Josh", "Emma", "Damien", "Carl",
+                     "Candice", "Vanessa", "Lucy", "Yvonne", "Ian",
+                     "James", "Martin", "David", "Madison", "Christopher", "Lucille", "Amy", "Tanya"}
+
+AGE_list = {"20", "15", "68", "75", "24", "50", "35", "46"}
