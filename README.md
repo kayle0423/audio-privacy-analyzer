@@ -3,7 +3,7 @@ Team: TEAM_7254
 
 隊員：吳國瑒(組長)、林仁凱、盧羿丞
 
-Private leaderboard：0.331 / Rank 22
+Private leaderboard：0.331 / Rank 21
 
 ---
 
