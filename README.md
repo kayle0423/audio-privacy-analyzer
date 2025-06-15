@@ -287,7 +287,7 @@ if __name__ == "__main__":
 ```
 1.創建 `AudioAnalyzer` 類別的一個實例。
 
-2.定義 `folder_path` 變數，你需要將其設定為你存放音訊檔案的實際路徑。
+2.定義 `folder_path` 變數，需要將其設定為你存放音訊檔案的實際路徑。
 
 3.呼叫 `analyzer.process_folder(folder_path)` 開始處理指定資料夾中的所有音訊檔案。
 
